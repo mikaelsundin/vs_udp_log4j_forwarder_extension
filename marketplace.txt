@@ -1,0 +1,11 @@
+# Introduction
+A plugin to parse and forward data from debug output window to Log4j format over UDP.
+
+# Implemented parsers
+* MetroLog.Net6/MetroLog.MAUI default format
+* Android log messages when running VS2022 HotReload.
+
+
+# Compatible log-viewer to receive the log messages
+https://github.com/sevdokimov/log-viewer
+
