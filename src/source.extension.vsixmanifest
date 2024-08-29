@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Log4JForwardExtension.4efe8632-59ac-4898-9e22-87ea9831d0a6" Version="1.0" Language="en-US" Publisher="Company" />
+        <Identity Id="Log4JForwardExtension.4efe8632-59ac-4898-9e22-87ea9831d0a6" Version="0.1" Language="en-US" Publisher="Mikael Sundin" />
         <DisplayName>Log4JForwardExtension</DisplayName>
         <Description xml:space="preserve">Visual studio debug window parser and forwarder to Log4J XML format over UDP</Description>
         <MoreInfo>https://github.com/mikaelsundin/vs_udp_log4j_forwarder_extension</MoreInfo>
@@ -12,7 +12,7 @@
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
-        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Pro">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
     </Installation>
