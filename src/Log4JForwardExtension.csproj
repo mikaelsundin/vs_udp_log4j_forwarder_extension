@@ -48,8 +48,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Data\LogLevels.cs" />
+    <Compile Include="Data\LogMessage.cs" />
     <Compile Include="Forwarder.cs" />
     <Compile Include="Log4JTransmitter.cs" />
+    <Compile Include="Parsers\HotReloadAndroidParser.cs" />
+    <Compile Include="Parsers\IParser.cs" />
+    <Compile Include="Parsers\MetroLogParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Log4JForwardExtensionPackage.cs" />
   </ItemGroup>

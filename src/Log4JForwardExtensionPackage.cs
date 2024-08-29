@@ -45,6 +45,8 @@ namespace Log4JForwardExtension
             // any Visual Studio service because at this point the package object is created but
             // not sited yet inside Visual Studio environment. The place to do all the other
             // initialization is the Initialize method.
+
+
         }
 
         /// <summary>
@@ -65,6 +67,13 @@ namespace Log4JForwardExtension
 
             //Handle Get text from VS2022
             Forwarder.Initialize(this, Log4JTransmitter.Instance.HandleDebugLine);
+
+            //Register the parsers
+            Log4JTransmitter.Instance.RegisterParser(new Parsers.MetroLogParser());
+            Log4JTransmitter.Instance.RegisterParser(new Parsers.HotReloadAndroidParser());
+
+
+
 
         }
 
