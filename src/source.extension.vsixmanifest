@@ -3,7 +3,10 @@
     <Metadata>
         <Identity Id="Log4JForwardExtension.4efe8632-59ac-4898-9e22-87ea9831d0a6" Version="1.0" Language="en-US" Publisher="Company" />
         <DisplayName>Log4JForwardExtension</DisplayName>
-        <Description>Empty VSIX Project.</Description>
+        <Description xml:space="preserve">Visual studio debug window parser and forwarder to Log4J XML format over UDP</Description>
+        <MoreInfo>https://github.com/mikaelsundin/vs_udp_log4j_forwarder_extension</MoreInfo>
+        <License>License.txt</License>
+        <Preview>true</Preview>
     </Metadata>
     <Installation InstalledByMsi="true">
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
