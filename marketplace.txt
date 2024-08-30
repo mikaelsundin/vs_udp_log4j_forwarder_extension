@@ -7,5 +7,5 @@ A plugin to parse and forward data from debug output window to Log4j format over
 
 
 # Compatible log-viewer to receive the log messages
-https://github.com/sevdokimov/log-viewer
+https://github.com/Styort/LogViewer
 

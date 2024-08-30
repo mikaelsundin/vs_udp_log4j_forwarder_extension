@@ -10,5 +10,5 @@ The UDP packets will be send to localhost (127.0.0.1) and port 7071.
 * Android log messages when running VS2022 HotReload.
 
 # Tested LogViewer
-* https://github.com/sevdokimov/log-viewer - no known problem.
+* https://github.com/Styort/LogViewer - no known problem.
 

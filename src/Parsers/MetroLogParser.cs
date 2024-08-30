@@ -61,7 +61,7 @@ internal class MetroLogParser : IParser
         {
             Timestamp = timestamp,
             Level = logLevel,
-            LoggerName = loggerName,
+            LoggerName = $"MetroLog.{loggerName}",
             Thread = thread,
             Message = message
         };
