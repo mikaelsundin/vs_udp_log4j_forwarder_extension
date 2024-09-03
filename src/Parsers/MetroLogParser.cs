@@ -23,8 +23,9 @@ internal class MetroLogParser : IParser
 
         //get parts and check length
         var args = line.Split(['|'], 6);
-        if(args.Length < 6) 
+        if(args.Length < 5) 
         {
+            //Logger can contain 5 or 6 parts (depending if loggername is included).
             return false;
         }
 
@@ -42,15 +43,24 @@ internal class MetroLogParser : IParser
             return false;
         }
 
-        //Get loggername part
-        loggerName = args[4].Trim();
+        if(args.Length == 6)
+        {
+            //loggername is included
+            loggerName = args[4].Trim();
+            message = args[5].Trim();
+        }
+        else
+        {
+            //loggername is not included
+            loggerName = "ROOT";
+            message = args[4].Trim();
+        }
+
         if (string.IsNullOrEmpty(loggerName))
         {
             return false;
         }
 
-        //Get message part and check if we got a valid message
-        message = args[5].Trim();
         if (string.IsNullOrEmpty(message))
         {
             return false;

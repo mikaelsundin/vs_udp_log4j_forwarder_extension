@@ -30,6 +30,16 @@ internal class Log4JTransmitter
 
     }
 
+    private string XmlEscape(string txt)
+    {
+        return txt.
+            Replace("\"", "&quot;").
+            Replace("'", "&apos;").
+            Replace("<", "&lt;").
+            Replace(">", "&gt;").
+            Replace("&", "&amp;");
+    }
+
     /// <summary>
     /// Send the Logmessage via UDP in Log4j format.
     /// </summary>
@@ -40,9 +50,10 @@ internal class Log4JTransmitter
         long unixTimestamp = new DateTimeOffset(log.Timestamp).ToUnixTimeMilliseconds();
         var level = log.Level.ToString().ToUpper();
 
+
         //Build minimal Log4j message
-        msg += $"<log4j:event logger=\"{log.LoggerName}\" level=\"{level}\" timestamp=\"{unixTimestamp}\" thread=\"{log.Thread}\">\n";
-        msg += $"<log4j:message>{log.Message}</log4j:message>\n";
+        msg += $"<log4j:event logger=\"{XmlEscape(log.LoggerName)}\" level=\"{level}\" timestamp=\"{unixTimestamp}\" thread=\"{log.Thread}\">\n";
+        msg += $"<log4j:message>{XmlEscape(log.Message)}</log4j:message>\n";
         msg += $"</log4j:event>";
 
         //Send UDP
